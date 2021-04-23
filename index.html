@@ -282,8 +282,7 @@
         var string;
        
         for (var i = 0; i < 10; i++) {
-          var a = document.getElementById("resp" + (1 + i)).value;
-          if (certoouerrado(a, correta[i], alt[i], i, labels[i])){
+          if (certoouerrado(correta[i], alt[i], i, labels[i])){
             cont++;
           } 
         }
@@ -306,7 +305,8 @@
         }
       }
 
-      function certoouerrado (a, c, alter, i, pai){
+      function certoouerrado (c, alter, i, pai){
+        var a = document.getElementById("resp" + (1 + i)).value;
         if (a==c) {
           pai.style = 'background-color:  greenyellow;';
           document.getElementById("result" + (1 + i)).innerHTML = "Parabéns voce acertou essa questão, que é a:" + "<br>" + alter;
