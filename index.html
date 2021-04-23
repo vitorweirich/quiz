@@ -313,7 +313,7 @@
           return true;
         } else {
           pai.style = 'background-color:  rgb(231, 98, 98);';
-          document.getElementById(result).innerHTML = "Que pena você errou, a resposta correta era a :" + "<br>" + alter;
+          document.getElementById("result" + (1 + i)).innerHTML = "Que pena você errou, a resposta correta era a :" + "<br>" + alter;
           return false;
         }
       }
